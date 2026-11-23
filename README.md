@@ -2,6 +2,8 @@
 
 An empirical systems and reasoning Pareto benchmark of Thinking Machines Lab's variable-loop recurrent Mixture-of-Experts checkpoint (**`TML-d24-varloop-research`**, `IQ4_NL` 4-bit GGUF) across `loop_num_passes = [1, 2, 3, 4, 5]` on the **35 hardest HumanEval+ problems (by canonical-solution length)**.
 
+> **About the model:** `TML-d24-varloop-research` is **not Inkling 2 Mini**. It is the variable-loop research sibling that Thinking Machines released alongside Inkling 2 Mini *"so others can run their own experiments."* Per the [model card](https://huggingface.co/thinkingmachines/TML-d24-varloop-research), it *"shares its pretraining and first stage of midtraining with Inkling 2 Mini"*. It is a 24-layer MoE (128 experts, 8 active) whose middle 12 layers loop a configurable number of times. It was trained with 1–5 passes and post-trained with 3, which is the range swept here. Thinking Machines *"caution against comparing TML-d24-varloop-research directly to Inkling 2 Mini,"* so none of the numbers below should be read as Inkling 2 Mini results.
+
 ![TML-d24-varloop-research Pareto Benchmark](assets/inkling2_varloop_pareto_35.png)
 
 ---
